@@ -1,4 +1,4 @@
-package  
+package com.chinx.tarot
 {
 	/**
 	 * ...
@@ -11,9 +11,9 @@ package
 	public class Card extends Shape 
 	{
 		public var suit:String;
-		public var number:Number;
+		public var number:int;
 		
-		public function Card(setSuit:String, setNumber:Number) 
+		public function Card(setSuit:String, setNumber:int) 
 		{
 			suit = setSuit;
 			number = setNumber;

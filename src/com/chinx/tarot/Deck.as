@@ -1,4 +1,4 @@
-package  
+package com.chinx.tarot
 {
 	/**
 	 * ...
@@ -22,7 +22,7 @@ package
 			cards = new Vector.<Card>(NUM_MAJOR_ARCANA + NUM_MINOR_ARCANA);
 			for (i = 0; i < NUM_MAJOR_ARCANA; i++)
 			{
-				cards.push(new Card(Suit.MAJOR, i));
+				cards.push(new Card(Suit.MAJOR, 100+i));
 			}
 			for (i = 0; i < CARDS_PER_SUIT*2; i++)
 			{
@@ -34,6 +34,14 @@ package
 			}
 			
 			numCards = NUM_MAJOR_ARCANA + NUM_MINOR_ARCANA;
+		}
+		
+		public function draw():Card{
+			private var i = Math.round((Math.random() * (numCards - 1)));
+			private var c:Card = cards[i];
+			cards = cards.splice(i, 1);
+			numCards--;
+			return c;
 		}
 		
 	}

@@ -1,4 +1,4 @@
-package  
+package com.chinx.tarot
 {
 	/**
 	 * Enumeration of suits

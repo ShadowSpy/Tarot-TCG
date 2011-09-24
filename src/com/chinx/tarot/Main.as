@@ -1,8 +1,9 @@
-package 
+package com.chinx.tarot
 {
 	import flash.display.Shape;
 	import flash.display.Sprite;
 	import flash.events.Event;
+	import mx.core.BitmapAsset;
 	
 	/**
 	 * ...
@@ -21,6 +22,8 @@ package
 		{
 			removeEventListener(Event.ADDED_TO_STAGE, init);
 			
+			var bmp:BitmapAsset = CardImage.getImage(Suit.PENTACLES,1);
+			addChild(bmp);
 		}
 		
 	}
