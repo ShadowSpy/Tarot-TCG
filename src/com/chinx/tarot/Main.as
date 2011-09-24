@@ -22,8 +22,14 @@ package com.chinx.tarot
 		{
 			removeEventListener(Event.ADDED_TO_STAGE, init);
 			
-			var bmp:BitmapAsset = CardImage.getImage(Suit.PENTACLES,1);
+			var bmp:BitmapAsset = CardImage.getImage(Suit.PENTACLES, 10);
+			var scale:Number = 90 / bmp.width;
+			bmp.scaleX = scale;
+			bmp.scaleY = scale;
 			addChild(bmp);
+			
+			trace (bmp.width);
+			trace (bmp.height);
 		}
 		
 	}
