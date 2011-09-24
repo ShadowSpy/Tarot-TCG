@@ -22,7 +22,7 @@ package com.chinx.tarot
 		public function init ():void
 		{
 			graphics.beginFill(0xff9933, 1);
-			graphics.drawRoundRect(0, 0, 100, 150);
+			graphics.drawRoundRect(0, 0, 100, 150, 5);
 		}
 		
 		public function getCardName():String
@@ -53,11 +53,12 @@ package com.chinx.tarot
 					case 19: return "The Sun";
 					case 20: return "Judgment";
 					case 21: return "The World";
+					default: return "";
 				}
 			}
 			else
 			{
-				private var retName:String;
+				var retName:String;
 				if (number == 1)
 					retName = "Ace";
 				else if (number == 11)

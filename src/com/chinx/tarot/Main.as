@@ -22,6 +22,7 @@ package com.chinx.tarot
 		{
 			removeEventListener(Event.ADDED_TO_STAGE, init);
 			
+			var hand:Hand = new Hand();
 			var bmp:BitmapAsset = CardImage.getImage(Suit.PENTACLES, 10);
 			var scale:Number = 90 / bmp.width;
 			bmp.scaleX = scale;

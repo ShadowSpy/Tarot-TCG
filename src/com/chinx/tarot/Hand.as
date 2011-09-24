@@ -1,11 +1,12 @@
-package 
+package com.chinx.tarot
 {
+	import flash.display.Sprite;
 	
 	/**
 	 * ...
 	 * @author Zhu
 	 */
-	public class  Hand {
+	public class  Hand extends Sprite {
 		public static const MAX_HAND_SIZE:Number = 14;
 		private var hand:Vector.<Card>;
 		
@@ -17,7 +18,7 @@ package
 			if (MAX_HAND_SIZE >= hand.length) {
 					return false;
 			}	
-			cards.push(c);
+			hand.push(c);
 			return true;
 		}
 		
